@@ -1,0 +1,57 @@
+MEDICAL AI COUNCIL 360 — PUBLIC DEMO TEST AND AUDIT RECORD
+Generated UTC: 2026-11-14T16:52:51.843375+00:00
+Python: 3.13.5
+Run from public-demo/
+
+$ python -m unittest discover -s tests -v
+test_alert_is_simulation_only (test_demo.DemoTests.test_alert_is_simulation_only) ... ok
+test_all_eight_receive_and_reply (test_demo.DemoTests.test_all_eight_receive_and_reply) ... ok
+test_cli_json_smoke (test_demo.DemoTests.test_cli_json_smoke) ... ok
+test_eight_distinct_councils (test_demo.DemoTests.test_eight_distinct_councils) ... ok
+test_events_have_monotonic_sequence_numbers (test_demo.DemoTests.test_events_have_monotonic_sequence_numbers) ... ok
+test_evidence_retains_source_and_ids (test_demo.DemoTests.test_evidence_retains_source_and_ids) ... ok
+test_no_marker_means_no_demo_alert (test_demo.DemoTests.test_no_marker_means_no_demo_alert) ... ok
+test_no_sharing_on_unmatched_notes (test_demo.DemoTests.test_no_sharing_on_unmatched_notes) ... ok
+test_output_avoids_treatment_instructions (test_demo.DemoTests.test_output_avoids_treatment_instructions) ... ok
+test_reject_duplicate_evidence_id (test_demo.DemoTests.test_reject_duplicate_evidence_id) ... ok
+test_reject_empty_or_oversized_evidence (test_demo.DemoTests.test_reject_empty_or_oversized_evidence) ... ok
+test_reject_missing_fictional_marker (test_demo.DemoTests.test_reject_missing_fictional_marker) ... ok
+test_reject_nonfictional_scenario (test_demo.DemoTests.test_reject_nonfictional_scenario) ... ok
+test_reviews_not_revealed_before_two_submissions (test_demo.DemoTests.test_reviews_not_revealed_before_two_submissions) ... ok
+test_serializable_json_includes_disclaimer (test_demo.DemoTests.test_serializable_json_includes_disclaimer) ... ok
+test_sharing_is_selective_and_traceable (test_demo.DemoTests.test_sharing_is_selective_and_traceable) ... ok
+test_synthetic_alert_occurs_before_review_and_routing (test_demo.DemoTests.test_synthetic_alert_occurs_before_review_and_routing) ... ok
+test_two_separate_reviews_same_evidence (test_demo.DemoTests.test_two_separate_reviews_same_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.730s
+
+OK
+Exit code: 0
+
+$ python -m medical_ai_360_demo
+MEDICAL AI COUNCIL 360° — PUBLIC WORKFLOW DEMO
+SIMULATION ONLY — no medical decisions, clinical triage, treatment advice, actual alerts, AI inference, or live research. NEVER use real patient data.
+Scenario: DEMO-CASE-001
+Evidence records: 3
+Council receipts: 8 / 8
+Separate rule-only oncology reviews: 2
+Simulated phrase alerts: 1
+Audit examples:
+  04 simulated_safety_alert: safety_example → human_review_placeholder (E2)
+  08 reviews_unsealed_for_comparison: coordinator → public_demo_viewer (E1, E2, E3)
+  25 example_evidence_shared: nutrition → rehabilitation (E1)
+  26 example_evidence_shared: sleep → organ_health (E2)
+No real medical processing or alerts were performed.
+Exit code: 0
+
+$ python -m medical_ai_360_demo --json
+JSON parse: PASS; scenario=DEMO-CASE-001; council_receipts=8; independent_rule_reviews=2; simulated_alerts=1; events=26
+Exit code: 0
+
+BASIC PUBLIC-SOURCE SCAN
+Pattern categories: AWS access key ID, GitHub classic token, GitHub fine-grained token, Slack token, private key PEM, long generic API token, email address, private local path
+Credential/email/private-path pattern matches: 0
+Unexpected network/process imports or dynamic-execution calls in package code: 0
+Static checks are limited and do NOT certify confidentiality, legal rights, or security.
+No clinical testing was performed or claimed.

@@ -1,0 +1,22 @@
+{
+  "fictional": true,
+  "scenario_id": "DEMO-CASE-001",
+  "description": "Entirely invented cancer-related scenario for software workflow illustration, not healthcare analysis.",
+  "evidence": [
+    {
+      "id": "E1",
+      "source": "invented_patient_statement",
+      "statement": "A fictional adult attending an oncology treatment visit describes fatigue and low appetite."
+    },
+    {
+      "id": "E2",
+      "source": "invented_caregiver_observation",
+      "statement": "The fictional caregiver uses the phrase worsening breathing after a short walk to trigger a demo alert marker."
+    },
+    {
+      "id": "E3",
+      "source": "invented_patient_statement",
+      "statement": "The fictional patient mentions wanting more comfort and restful sleep."
+    }
+  ]
+}
